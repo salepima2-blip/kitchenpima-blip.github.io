@@ -25,18 +25,20 @@ async function walk(directory) {
 
 function prefixPublicAssets(source) {
   return source
-    .replaceAll('url("/images/', `url("${repositoryPath}/images/`)
-.replaceAll("url('/images/", `url('${repositoryPath}/images/`)
-.replaceAll("url(/images/", `url(${repositoryPath}/images/`)
-.replaceAll('url("/media/', `url("${repositoryPath}/media/`)
-.replaceAll("url('/media/", `url('${repositoryPath}/media/`)
-.replaceAll("url(/media/", `url(${repositoryPath}/media/`)
+    .replaceAll('"/images/', `"${repositoryPath}/images/`)
+    .replaceAll("'/images/", `'${repositoryPath}/images/`)
+    .replaceAll("&quot;/images/", `&quot;${repositoryPath}/images/`)
+    .replaceAll("&#x27;/images/", `&#x27;${repositoryPath}/images/`)
+    .replaceAll("url(/images/", `url(${repositoryPath}/images/`)
     .replaceAll('"/media/', `"${repositoryPath}/media/`)
     .replaceAll("'/media/", `'${repositoryPath}/media/`)
+    .replaceAll("&quot;/media/", `&quot;${repositoryPath}/media/`)
+    .replaceAll("&#x27;/media/", `&#x27;${repositoryPath}/media/`)
+    .replaceAll("url(/media/", `url(${repositoryPath}/media/`)
     .replaceAll('"/favicon.svg', `"${repositoryPath}/favicon.svg`)
     .replaceAll("'/favicon.svg", `'${repositoryPath}/favicon.svg`)
-    .replaceAll('url("/images/', `url("${repositoryPath}/images/`)
-    .replaceAll("url('/images/", `url('${repositoryPath}/images/`);
+    .replaceAll("&quot;/favicon.svg", `&quot;${repositoryPath}/favicon.svg`)
+    .replaceAll("&#x27;/favicon.svg", `&#x27;${repositoryPath}/favicon.svg`);
 }
 
 for (const filePath of await walk(outputDirectory)) {
