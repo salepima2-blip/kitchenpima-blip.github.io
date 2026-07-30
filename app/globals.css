@@ -151,7 +151,7 @@ nav a:hover, nav a:focus-visible { color: var(--gold-light); }
 .hero-image {
   position: absolute;
   inset: 0;
-  background-image: url("/kitchenpima-blip.github.io/images/hero-kitchen.png");
+  background-image: url("/images/hero-kitchen.png");
   background-size: cover;
   background-position: center;
   transform: scale(1.015);
@@ -2715,7 +2715,7 @@ form > small { display: block; margin-top: 15px; color: #71736f; font-size: 10px
   color: #20312a;
 }
 .mode-light .hero-image {
-  background-image: url("/kitchenpima-blip.github.io/images/hero-light.png");
+  background-image: url("/images/hero-light.png");
   background-position: center;
 }
 .mode-light .hero-shade {
