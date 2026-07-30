@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
-const repositoryPath = "/kitchenpima-blip.github.io";
+const repositoryPath =
+  process.env.GITHUB_ACTIONS === "true"
+    ? "/kitchenpima-blip.github.io"
+    : "";
 
 const nextConfig: NextConfig = {
   output: "export",
