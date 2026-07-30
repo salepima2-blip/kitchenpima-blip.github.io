@@ -30,7 +30,7 @@ function prefixPublicAssets(source) {
 .replaceAll("url(/images/", `url(${repositoryPath}/images/`)
 .replaceAll('url("/media/', `url("${repositoryPath}/media/`)
 .replaceAll("url('/media/", `url('${repositoryPath}/media/`)
-.replaceAll("url(/media/", `url(${repositoryPath}/media/`);
+.replaceAll("url(/media/", `url(${repositoryPath}/media/`)
     .replaceAll('"/media/', `"${repositoryPath}/media/`)
     .replaceAll("'/media/", `'${repositoryPath}/media/`)
     .replaceAll('"/favicon.svg', `"${repositoryPath}/favicon.svg`)
