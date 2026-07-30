@@ -25,8 +25,12 @@ async function walk(directory) {
 
 function prefixPublicAssets(source) {
   return source
-    .replaceAll('"/images/', `"${repositoryPath}/images/`)
-    .replaceAll("'/images/", `'${repositoryPath}/images/`)
+    .replaceAll('url("/images/', `url("${repositoryPath}/images/`)
+.replaceAll("url('/images/", `url('${repositoryPath}/images/`)
+.replaceAll("url(/images/", `url(${repositoryPath}/images/`)
+.replaceAll('url("/media/', `url("${repositoryPath}/media/`)
+.replaceAll("url('/media/", `url('${repositoryPath}/media/`)
+.replaceAll("url(/media/", `url(${repositoryPath}/media/`);
     .replaceAll('"/media/', `"${repositoryPath}/media/`)
     .replaceAll("'/media/", `'${repositoryPath}/media/`)
     .replaceAll('"/favicon.svg', `"${repositoryPath}/favicon.svg`)
